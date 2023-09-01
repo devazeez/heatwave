@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+body {
+
+    margin: 0;
+    background: #303030;
+    height: auto;
+}
+
+.image img {
+    width: 225.52px;
+    height: 57px;
+}
+
+.left-side img {
+    width: 170px;
+    height: 175px
+}
+
+.item-header h1 {
+    color: white;
+    font-size: 13.5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    word-wrap: break-word
+}
+
+.item-details p {
+    color: white;
+    font-size: 10.49px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.item-price p {
+    color: #50AB08;
+    font-size: 13.64px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 18.48px;
+    word-wrap: break-word
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+    body {
+        /* background: blue; */
+
+    }
+    .landing{
+        padding-left: 10px;
+        
+
+    }
+    .header .image{
+        display: flex;
+        justify-content: space-around;
+    }
+    .middle-part{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card-details{
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        
+    }
+    .right-side{
+        margin-left: 8px;
+        margin-right: 8px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+    }
+    /* .item-details{
+        margin-top: 0px;
+    }
+    .item-header{
+        margin-top: 15px;
+    }
+    .item-price{
+        margin-top: 0px;
+    } */
+
+}
