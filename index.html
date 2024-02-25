@@ -4,7 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Redstore | Ecommerce website</title>
+        <title>HeatWave</title>
+        <script src="./index.js" type="module"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,18 +18,18 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                    <a href="index.html"><img src="https://res.cloudinary.com/diwxousgd/image/upload/v1693600558/image_26_b8xiv5.png" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
-                         <li><a href="products.html">Products</a></li>
+                         <li><a href="./html/products.html">Products</a></li>
                          <li><a href="">About</a></li>
                          <li><a href="">Contact</a></li>
-                         <li><a href="account.html">Account</a></li>
+                         <li><a href="./html/account.html">Account</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <a href="../heatwave/html/cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
                 <img src="images/menu.png" class="menu-icon" onClick="menutoggle()" >
             </div>
             <div class="row">
@@ -38,7 +39,7 @@
                     <a href="products.html" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <img src="images/image1.png">
+                    <img src="https://res.cloudinary.com/diwxousgd/image/upload/v1693600607/image_14_aaxecq.png">
                 </div>
             </div>
         </div>
@@ -76,7 +77,7 @@
                             <i class="fa fa-star-half-o" ></i>
                             <i class="fa fa-star-o" ></i>
                         </div>
-                        <p>$50.00</p>
+                        <p class="price">$09.00</p>
                     </div>
                     <div class="col-4">
                         <a href="products-details.html"><img src="images/product-2.jpg"></a>
@@ -88,7 +89,7 @@
                             <i class="fa fa-star" ></i>
                             <i class="fa fa-star-half-o" ></i>
                         </div>
-                        <p>$35.00</p>
+                        <p class="price">$09.00</p>
                     </div>
                     <div class="col-4">
                         <a href="products-details.html"><img src="images/product-3.jpg"></a>
@@ -100,7 +101,7 @@
                             <i class="fa fa-star" ></i>
                             <i class="fa fa-star-o" ></i>
                         </div>
-                        <p>$15.00</p>
+                        <p class="price">$09.00</p>
                     </div>
                     <div class="col-4">
                         <a href="products-details.html"><img src="images/product-10.jpg"></a>
@@ -112,103 +113,19 @@
                             <i class="fa fa-star-o" ></i>
                             <i class="fa fa-star-o" ></i>
                         </div>
-                        <p>$48.00</p>
+                        <p class="price">$09.00</p>
                     </div>  
                 </div>
             
             
              <h2 class="title" >Latest Products</h2>
-                <div class="row">
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-5.jpg"></a>
-                        <h4>Flat Heel gray hoes</h4>
-                        <div class="rating">
-                            <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$50.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-3.jpg"></a>
-                        <h4>Lace-Fastening black Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                        </div>
-                        <p>$21.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-7.jpg"></a>
-                        <h4>HRX Men's cotton socks</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$09.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-2.jpg"></a>
-                        <h4>Lace-Up Running Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$35.00</p>
-                    </div>  
+                <div class="row" id="product-container">
+                
+        
                 </div>
             <!--new row for the latest product-->
                 <div class="row">
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-7.jpg"></a>
-                        <h4>HRX cotton socks</h4>
-                        <div class="rating">
-                            <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$10.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-10.jpg"></a>
-                        <h4>Flat Lace-Fastening Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                        </div>
-                        <p>$48.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-11.jpg"></a>
-                        <h4>Loafers Men (Gray)</h4>
-                        <div class="rating">
-                            <i class="fa fa-star-o" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$15.00</p>
-                    </div>
-                    <div class="col-4">
+                    <!-- <div class="col-4">
                         <a href="products-details.html"><img src="images/product-12.jpg"></a>
                         <h4>Lace-Fastening white Shoes</h4>
                         <div class="rating">
@@ -218,8 +135,8 @@
                             <i class="fa fa-star-o" ></i>
                             <i class="fa fa-star-o" ></i>
                         </div>
-                        <p>$21.00</p>
-                    </div>  
+                        <p class="price">$09.00</p>
+                    </div>   -->
                 </div>
             </div>
         
@@ -359,6 +276,7 @@
         
         
         <!-----------------------------------js for toggle menu----------------------------------------------->
+        
         <script>
             var menuItems=document.getElementById("MenuItems");
             
@@ -372,5 +290,6 @@
                 }
             }
         </script>
+
     </body>
 </html>

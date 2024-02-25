@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>All Products - Redstore</title>
-        <link rel="stylesheet" href="style.css">
+        <script src="../js/product-details.js" type="module"></script>
+        <link rel="stylesheet" href="../style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
@@ -17,11 +18,11 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                    <a href="index.html"><img src="https://res.cloudinary.com/diwxousgd/image/upload/v1693600558/image_26_b8xiv5.png" width="125px"></a>
                 </div>
-               <nav>
+                <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                          <li><a href="products.html">Products</a></li>
                          <li><a href="">About</a></li>
                          <li><a href="">Contact</a></li>
@@ -37,23 +38,46 @@
     <!--</div>-->
     
         
-        <!------------------------------ Products------------------------------>
-        <div class="small-container">
-            <div class="row row-2">
-                <h2>All Products</h2>
-                <select>
-                    <option>Default sorting</option>
-                    <option>Short by price</option>
-                    <option>Short by popularity</option>
-                    <option>Short by rating</option>
-                    <option>Short by sale</option>
-                </select>
-            </div>
+        <!------------------------------ Single product details------------------------------>
+        <div class="small-container single-product">
             
             
             <!--<h2 class="title" >Featured Products</h2>-->
             <div class="row">
-                    <div class="col-4">
+                    <div class="col-2">
+                        <img src="" width="100%" id="productImg">
+                        
+                        
+
+                    </div>
+                
+                    <div class="col-2">
+                        <p>Home / Shoes</p>
+                        <h1 id="name"></h1>
+                        <h4 id="price"></h4>
+      
+                        <input type="number" values="1">
+                        <a href="cart.html" class="btn">Add to Cart</a>
+                        <h3>Product Details <i class="fa fa-indent" ></i></h3>
+                        <br>
+                        <p id="description"></p>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <!----------------------------------Title------------------------------------->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>Related Products</h2>
+                <a href="products.html"><p>View More</p></a>
+            </div>
+        </div>
+                
+        <!----------------------------------products------------------------------------->
+        <div class="small-container">
+             <div class="row">
+                     <div class="col-4">
                         <a href="products-details.html"><img src="images/product-11.jpg"></a>
                         <a href="products-details.html"><h4>Downshifter Sports Shoes</h4></a>
                         <div class="rating">
@@ -103,124 +127,8 @@
                         <p>$48.00</p>
                     </div>  
                 </div>
-            
-            <!-------------- new row----------------->
-            
-            <div class="row">
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-5.jpg"></a>
-                        <h4>Flat Heel gray hoes</h4>
-                        <div class="rating">
-                            
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$50.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-3.jpg"></a>
-                        <h4>Lace-Fastening black Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                        </div>
-                        <p>$21.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-7.jpg"></a>
-                        <h4>HRX Men's cotton socks</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$09.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-2.jpg"></a>
-                        <h4>Lace-Up Running Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$35.00</p>
-                    </div>  
-                </div>
-            <!--new row for the latest product-->
-                <div class="row">
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-7.jpg"></a>
-                        <h4>HRX cotton socks</h4>
-                        <div class="rating">
-                            
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$10.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-10.jpg"></a>
-                        <h4>Flat Lace-Fastening Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-half-o" ></i>
-                        </div>
-                        <p>$48.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-11.jpg"></a>
-                        <h4>Loafers Men (Gray)</h4>
-                        <div class="rating">
-                            <i class="fa fa-star-o" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$15.00</p>
-                    </div>
-                    <div class="col-4">
-                        <a href="products-details.html"><img src="images/product-12.jpg"></a>
-                        <h4>Lace-Fastening white Shoes</h4>
-                        <div class="rating">
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star" ></i>
-                            <i class="fa fa-star-o" ></i>
-                            <i class="fa fa-star-o" ></i>
-                        </div>
-                        <p>$21.00</p>
-                    </div>  
-                </div>
-            
-            <div class="page-btn">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>&#8594;</span>
-            </div>
-            
         </div>
-        
-        
+
         <!----------------------------------footer------------------------------------->
         <div class ="footer">
         <div class="container">
@@ -279,6 +187,28 @@
                     MenuItems.style.maxHeight="0px";
                 }
             }
+        </script>
+        
+        <!-----------------------js for product gallery-------------------->
+        
+        <script>
+            var productImg=document.getElementById("productImg");
+            var smallImg=document.getElementsByClassName("small-img");
+            
+            smallImg[0].onclick=function(){
+                productImg.src=smallImg[0].src;
+            }
+             smallImg[1].onclick=function(){
+                productImg.src=smallImg[1].src;
+            }
+              smallImg[2].onclick=function(){
+                productImg.src=smallImg[2].src;
+            }
+               smallImg[3].onclick=function(){
+                productImg.src=smallImg[3].src;
+            }
+            
+            
         </script>
     </body>
 </html>
