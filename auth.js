@@ -1,4 +1,4 @@
-import { showToast } from "../js/toast.js";
+import { showToast } from "./toast.js";
 const navbarMenu = document.querySelector(".navbar .links");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const hideMenuBtn = navbarMenu.querySelector(".close-btn");

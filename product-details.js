@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if productId is present
     if (productId) {
         // Construct the URL for fetching product details
-        const endpointUrl = `https://heatwave-backend.vercel.app/admin/products/${productId}`;
+        const endpointUrl = `https://heatwave-backend.vercel.app/api/admin/products/${productId}`;
 
         // Fetch product details from the endpoint
         fetch(endpointUrl)

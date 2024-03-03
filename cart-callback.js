@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // Assuming the response data structure is similar to the previous example
       const cartItems = responseData.data;
-      console.log("test:", cartItems);
+      console.log("Cart Items:", cartItems);
       // Get the table body element
       const element = document.querySelector('.small-container.cart-page');
       const table = document.getElementById("main-table")
