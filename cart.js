@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => {
         // Check if the response status is 401
-        if (response.status === 401) {
+        if (response.status === 401 || response.status === 500) {
           // Redirect to "auth.html"
           window.location.href = "auth.html";
         }

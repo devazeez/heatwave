@@ -1,34 +1,12 @@
-// // import { config } from './variables.js';
-// // import { showToast } from './toast.js';
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   // The endpoint URL to fetch data
-//   const endpointUrl = 'http://localhost:3000/api/admin/products';
-
-//   fetch(endpointUrl, {
-//     method: 'GET'
-//   })
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok.');
-//     }
-//     return response.json();
-//   })
-//   .then(responseData => {
-//     // Process the response data
-//     console.log(responseData); // Check the response data
-//     const products = responseData.data; // Access the 'data' property
-//     console.log(products); // Check the products array
-//     // Process the products further
-//   })
-//   .catch(error => {
-//     console.error('Fetch error:', error);
-//   });
-
-// });
 
 // import { config } from './variables.js';
 // import { showToast } from './toast.js';
+function addCommas(number) {
+  return number.toLocaleString();
+}
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // The endpoint URL to fetch data
@@ -61,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create an anchor element for the product
         const anchor = document.createElement("a");
-        anchor.href = "../heatwave/html/products-details.html"; // Construct the URL with product ID
+        anchor.href = "products-details.html"; // Construct the URL with product ID
         anchor.onclick = function () {
           localStorage.setItem("productId", product._id); // Store the product ID in localStorage
         };
@@ -81,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create a paragraph element for the product price
         const priceParagraph = document.createElement("p");
         priceParagraph.classList.add("price");
-        priceParagraph.textContent = "₦" + product.price; // Assuming 'price' contains the product price
+        priceParagraph.textContent = "₦ " + addCommas(product.price); // Assuming 'price' contains the product price
         colDiv.appendChild(priceParagraph);
 
         // Append the col-4 div to the product container
