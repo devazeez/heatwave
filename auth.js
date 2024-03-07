@@ -1,4 +1,6 @@
+import { BASE_URL } from './variables.js';
 import { showToast } from "./toast.js";
+
 const navbarMenu = document.querySelector(".navbar .links");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const hideMenuBtn = navbarMenu.querySelector(".close-btn");
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(formData);
 
       // Make a POST request to your API endpoint
-      const response = await fetch("https://heatwave-backend.vercel.app/api/user/signup", {
+      const response = await fetch(`${BASE_URL}/api/user/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       // Make a POST request to your login API endpoint
-      const response = await fetch("https://heatwave-backend.vercel.app/api/user/login", {
+      const response = await fetch(`${BASE_URL}/api/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -99,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = await response.json();
         const successMessage = data.message; // Replace 'message' with the actual key in your API response
         showToast(successMessage, 'success')
-        window.location.href = 'cart.html'
+        window.location.href = 'index.html'
         localStorage.setItem("authToken", data.token)
 
       } else {

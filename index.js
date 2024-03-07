@@ -1,4 +1,4 @@
-
+import { BASE_URL } from './variables.js';
 // import { config } from './variables.js';
 // import { showToast } from './toast.js';
 function addCommas(number) {
@@ -10,7 +10,7 @@ function addCommas(number) {
 
 document.addEventListener("DOMContentLoaded", function () {
   // The endpoint URL to fetch data
-  const endpointUrl = "https://heatwave-backend.vercel.app/api/admin/products";
+  const endpointUrl = `${BASE_URL}/api/admin/products`;
 
   fetch(endpointUrl, {
     method: "GET",

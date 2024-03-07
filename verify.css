@@ -1,0 +1,40 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: lightgreen;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    display: inline-block;
+    background: #ffffff;
+    color: #563434;
+    text-decoration: none;
+    padding:18px 30px 30px 30px;
+    /* margin: 30px 0px; */
+    border-radius: 20px;
+    transition:background 0.5s;
+    height: 70px;
+}
+.btn:hover{
+    background: #563434;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+

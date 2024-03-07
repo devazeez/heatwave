@@ -6,8 +6,10 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>All Products - Heatwave</title>
         <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+        <script src="./variables.js" type="module"></script>
         <script src="product-details.js" type="module"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="toast.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
@@ -15,6 +17,14 @@
 
     </head>
     <body>
+
+        <div class="toast">
+            <div class="toast-content">
+              <p class="toast-message">success.</p>
+              <button class="toast-close-button" aria-label="Close">&times;</button>
+            </div>
+          </div>
+          
         <!--<div class ="header">-->
         <div class="container">
             <div class="navbar">
@@ -69,7 +79,7 @@
                         <h4 id="price"></h4>
       
                         <input class="unit" type="number" value="1">
-                        <a href="" class="btn">Add to Cart</a>
+                        <a class="btn">Add to Cart</a>
                         <h3>Product Details <i class="fa fa-indent" ></i></h3>
                         <br>
                         <p id="description"></p>
@@ -185,6 +195,7 @@
         </div>
     </div>
         
+    <script type="module" src="./toast.js"></script>
         
         <!-----------------------------------js for toggle menu----------------------------------------------->
         <script>
@@ -204,6 +215,7 @@
         <!-----------------------js for product gallery-------------------->
         
         <script>
+            
             var productImg=document.getElementById("productImg");
             var smallImg=document.getElementsByClassName("small-img");
             

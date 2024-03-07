@@ -1,6 +1,8 @@
+import { BASE_URL } from './variables.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     // The endpoint URL to fetch data
-    const endpointUrl = 'https://heatwave-backend.vercel.app/api/admin/products';
+    const endpointUrl = `${BASE_URL}/api/admin/products`;
   
     fetch(endpointUrl, {
         method: 'GET'
