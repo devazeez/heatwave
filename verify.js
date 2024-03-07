@@ -42,6 +42,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (response.status === 200) {
           // Display the body tag on the HTML page
           document.body.style.display = "block";
+
+          setTimeout(function () {
+            window.location.href = "auth.html";
+          }, 3000);
+          
         } else {
           console.error("Order verification unsuccessful. Status code:", response.status);
         }
