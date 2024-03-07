@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     try {
       // Extract ref and authToken from the URL and localStorage
       const urlParams = new URLSearchParams(window.location.search);
-      const ref = urlParams.get('ref');
+      const ref = urlParams.get('reference');
       const authToken = localStorage.getItem('authToken');
   
       // Check if ref is present
