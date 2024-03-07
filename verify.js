@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", async function () {
           document.body.style.display = "block";
 
           setTimeout(function () {
-            window.location.href = "auth.html";
+            window.location.href = "index.html";
           }, 3000);
-          
+
         } else {
           console.error("Order verification unsuccessful. Status code:", response.status);
         }
