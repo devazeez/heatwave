@@ -129,6 +129,7 @@ p {
 
 .small-container {
   max-width: 1080px;
+  /* margin: 100; */
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
@@ -147,7 +148,7 @@ p {
 }
 .title {
   text-align: center;
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
   position: relative;
   line-height: 60px;
   color: #555;
@@ -344,10 +345,17 @@ ul {
 
 /*-----------------------media query for less than 600 screen size(mobile device) -----------------------*/
 @media only screen and (max-width: 600px) {
+  .col-2 img {
+    display: none;
+  }
+
   .row {
     text-align: center;
     display: flex;
     /* flex-direction: column;  */
+  }
+  .title{
+    margin-top: 80px;
   }
   /* .row .col-4{
         width: 10px;
