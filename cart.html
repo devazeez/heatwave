@@ -4,12 +4,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>All Products - Heatwave</title>
-        <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
-        <script src="cart.js" type="module"></script>
-        <script src="auth.js" type="module"></script>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="auth.css">
+        <title>All Products - Redstore</title>
+        <script src="../js/cart.js" type="module"></script>
+        <script src="../js/auth.js" type="module"></script>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../styles/auth.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
@@ -39,179 +38,157 @@
            
         </div>
     <!--</div>-->
-    
-        
-        <!------------------------------ cart items details------------------------------>
 
-        <div class="small-container cart-page">
-        <table id="main-table">
-            <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-            </tr>
-            <div class="tbody">
-                <tr class="main-row">
-                    <td class="product">
-                        <div class="cart-info">
-                            <img src="images/buy-1.jpg" id="product-image">
-                            <div class="smaller-cart-info">
-                                <p id="product-name">Red Printed T-Shirt</p>
-                                <small id="product-price">Price: $50.00</small><br>
-                                <a href="">Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="quantity"><p id="unit">2</p></td>
-                    <td id="colated-price">$50.00</td>
-                </tr>
-
-            </div>
-
-            
-            
-            </table>
-            
-            <div class="total-price">
-                <table>
-                    <tr>
-                        <td>Subtotal</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td>Tax</td>
-                        <td>$35.00</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>$230.00</td>
-                    </tr>
-                </table>
-            </div>
-            <button id="pay">PAY</button>
+    <!------------------------------ cart items details------------------------------>
+    <main id="cart-page">
+      <h1>Checkout</h1>
+      <section id="cart-container">
+        <div id="checkout">
+          <p>
+            Total Items:
+            <span id="item-count"></span>
+          </p>
+          <div id="cart-item-container" class="cart-items"></div>
         </div>
-        
-        <div class="blur-bg-overlay"></div>
+        <div id="place-order">
+          <div class="cart-card">
+            <h2>Total Amount</h2>
+            <p>
+              Amount: ₦
+              <span id="total-amount"></span>
+            </p>
+            <a href="orderconfirm.html">
+              <button id="place-order-btn">Place Order</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="blur-bg-overlay"></div>
     <div class="form-popup">
-        <span class="close-btn material-symbols-rounded">close</span>
-        <div class="form-box login">
-            <div class="form-details">
-                <h2>Welcome Back</h2>
-                <p>Please log in using your personal information to stay connected with us.</p>
-            </div>
-            <div class="form-content">
-                <h2>LOGIN</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <a href="#" class="forgot-pass-link">Forgot password?</a>
-                    <button type="submit">Log In</button>
-                </form>
-                <div class="bottom-link">
-                    Don't have an account?
-                    <a href="#" id="signup-link">Signup</a>
-                </div>
-            </div>
+      <span class="close-btn material-symbols-rounded">close</span>
+      <div class="form-box login">
+        <div class="form-details">
+          <h2>Welcome Back</h2>
+          <p>
+            Please log in using your personal information to stay connected with
+            us.
+          </p>
         </div>
-        <div class="form-box signup">
-            <div class="form-details">
-                <h2>Create Account</h2>
-                <p>To become a part of our community, please sign up using your personal information.</p>
+        <div class="form-content">
+          <h2>LOGIN</h2>
+          <form action="#">
+            <div class="input-field">
+              <input type="text" required />
+              <label>Email</label>
             </div>
-            <div class="form-content">
-                <h2>SIGNUP</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Enter your email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Create password</label>
-                    </div>
-                    <div class="policy-text">
-                        <input type="checkbox" id="policy">
-                        <label for="policy">
-                            I agree the
-                            <a href="#" class="option">Terms & Conditions</a>
-                        </label>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Already have an account? 
-                    <a href="#" id="login-link">Login</a>
-                </div>
+            <div class="input-field">
+              <input type="password" required />
+              <label>Password</label>
             </div>
+            <a href="#" class="forgot-pass-link">Forgot password?</a>
+            <button type="submit">Log In</button>
+          </form>
+          <div class="bottom-link">
+            Don't have an account?
+            <a href="#" id="signup-link">Signup</a>
+          </div>
         </div>
+      </div>
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Create Account</h2>
+          <p>
+            To become a part of our community, please sign up using your
+            personal information.
+          </p>
+        </div>
+        <div class="form-content">
+          <h2>SIGNUP</h2>
+          <form action="#">
+            <div class="input-field">
+              <input type="text" required />
+              <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+              <input type="password" required />
+              <label>Create password</label>
+            </div>
+            <div class="policy-text">
+              <input type="checkbox" id="policy" />
+              <label for="policy">
+                I agree the
+                <a href="#" class="option">Terms & Conditions</a>
+              </label>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="bottom-link">
+            Already have an account?
+            <a href="#" id="login-link">Login</a>
+          </div>
+        </div>
+      </div>
     </div>
-        
-       
-        <!----------------------------------footer------------------------------------->
-        <div class ="footer">
-        <div class="container">
-            
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download Our App</h3>
-                    <p>Download App for Android and ios mobile phone.</p>
-                    <div class="app-logo">
-                        <img src="images/play-store.png" alt="">
-                        <img src="images/app-store.png" alt="">
-                    </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="images/logo-white.png">
-                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                   <ul>
-                       <li>Coupons</li>
-                       <li>Blog Post</li>
-                       <li>Return Policy</li>
-                       <li>Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col-4">
-                    <h3>Follow us</h3>
-                   <ul>
-                       <li>Facebook</li>
-                       <li>Twitter</li>
-                       <li>Instagram</li>
-                       <li>Youtube</li>
-                    </ul>
-                </div>
-                
+
+    <!----------------------------------footer------------------------------------->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" alt="" />
+              <img src="images/app-store.png" alt="" />
             </div>
-            
-            <hr><!--horizontal line-->
-            <p class="copyright">Copyright 2021 - Apurba Kr. Pramanik</p>
-            
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" />
+            <p>
+              Our Purpose Is To Sustainably Make the Pleasure and Benefits of
+              Sports Accessible to the Many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
         </div>
+
+        <hr />
+        <!--horizontal line-->
+        <p class="copyright">Copyright 2021 - Apurba Kr. Pramanik</p>
+      </div>
     </div>
-        
-        
-        <!-----------------------------------js for toggle menu-------------------------------------->
-        <script>
-            var menuItems=document.getElementById("MenuItems");
-            
-            MenuItems.style.maxHeight="0px";
-            function menutoggle(){
-                if(MenuItems.style.maxHeight == "0px"){
-                    MenuItems.style.maxHeight="200px";
-                }
-                else{
-                    MenuItems.style.maxHeight="0px";
-                }
-            }
-        </script>
-     
-    </body>
+
+    <!-----------------------------------js for toggle menu-------------------------------------->
+    <script>
+      var menuItems = document.getElementById("MenuItems");
+
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
 </html>
