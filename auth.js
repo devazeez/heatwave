@@ -1,4 +1,4 @@
-import { BASE_URL } from './variables.js';
+import { BASE_URL } from "./variables.js";
 import { showToast } from "./toast.js";
 
 const navbarMenu = document.querySelector(".navbar .links");
@@ -62,14 +62,30 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(formData),
       });
-
       const data = await response.json();
 
+      if (response.ok) {
+        // const data = await response.json();
+        const successMessage = data.message; // Replace 'message' with the actual key in your API response
+        showToast(successMessage, "success");
+        // localStorage.setItem("authToken", data.token)
+        setTimeout(function () {
+          window.location.href = "auth.html";
+        }, 2200);
+
+        return;
+      } else {
+        // const data = await response.json();
+        const errorMessage = data.message;
+        console.error("Error response:", errorMessage);
+        showToast(errorMessage, "error");
+      }
       // Handle the response from the server (e.g., show success message, redirect, etc.)
-      console.log("Signup successful:", data);
+      // console.log("Signup successful:", errorMessage);
     } catch (error) {
       // Handle any errors that occur during the fetch
       console.error("Error during signup:", error);
+      showToast(error, "error");
     }
   });
 });
@@ -100,17 +116,15 @@ document.addEventListener("DOMContentLoaded", function () {
       if (response.ok) {
         const data = await response.json();
         const successMessage = data.message; // Replace 'message' with the actual key in your API response
-        showToast(successMessage, 'success')
-        window.location.href = 'index.html'
-        localStorage.setItem("authToken", data.token)
-
+        showToast(successMessage, "success");
+        window.location.href = "index.html";
+        localStorage.setItem("authToken", data.token);
       } else {
         const errorData = await response.json();
         const errorMessage = errorData.message;
         console.error("Error response:", errorData);
         showToast(errorMessage, "error");
       }
-
     } catch (error) {
       // Handle any errors that occur during the fetch
       showToast("Unauthorized", "error");
