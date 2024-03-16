@@ -349,14 +349,12 @@ ul {
     display: none;
   }
 
-  
-
   .row {
     text-align: center;
     display: flex;
     /* flex-direction: column;  */
   }
-  .title{
+  .title {
     margin-top: 80px;
   }
   /* .row .col-4{
