@@ -1,22 +1,5 @@
 import { BASE_URL } from './variables.js';
-
-// document.addEventListener('DOMContentLoaded', async function () {
-//     try{
-//         const endpointUrl = `${BASE_URL}/api/user/orders/verify?ref=${ref}`;
-//         const response = await fetch(endpointUrl, {
-//             method: 'GET',
-//             headers: {
-//               'Content-Type': 'application/json',
-//               'Authorization': `Bearer ${authToken}`,
-//             },
-//           });
-
-
-//     }catch (error) {
-//         console.error("Error:", error);
-//       }
-// })
-
+import { showToast } from "./toast.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
     try {
@@ -49,9 +32,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         } else {
           console.error("Order verification unsuccessful. Status code:", response.status);
+          // showToast("Order verification unsuccessful", "error");
         }
       } else {
         console.error("Ref not found in the URL.");
+        // showToast("Order verification unsuccessful", "error");
         document.body.style.display = "none";
 
       }
